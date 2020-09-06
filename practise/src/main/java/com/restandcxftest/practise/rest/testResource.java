@@ -16,4 +16,11 @@ public class testResource {
     public String reString(String s){
         return new StringBuilder(s).reverse().toString();
     }
+
+    @Path("/sayHello")
+    @GET
+    @Produces(MediaType.TEXT_PLAIN)
+    public String sayHello() {
+        return "hello, world";
+    }
 }
